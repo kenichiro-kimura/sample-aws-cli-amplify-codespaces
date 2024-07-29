@@ -1,14 +1,7 @@
 {
   "name": "AWS cli and Amplify SDK Development Container",
   "dockerFile": "Dockerfile",
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash",
-    "terminal.integrated.shellArgs.linux": ["--init-file", "/workspaces/.bashrc"]
-  },
-  "extensions": [
-  ],
   "containerEnv": {
-    //AWS_DEFAULT_REGION
     "AWS_ACCESS_KEY_ID": "${localEnv:AWS_ACCESS_KEY_ID}",
     "AWS_SECRET_ACCESS_KEY": "${localEnv:SAWS_SECRET_ACCESS_KEY}",
     "AWS_DEFAULT_REGION": "${localEnv:AWS_DEFAULT_REGION}",
@@ -19,5 +12,16 @@
     "AWS_SECRET_ACCESS_KEY": "${localEnv:SAWS_SECRET_ACCESS_KEY}",
     "AWS_DEFAULT_REGION": "${localEnv:AWS_DEFAULT_REGION}",
     "TZ": "Asia/Tokyo"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "terminal.integrated.shellArgs.linux": ["--init-file", "/workspaces/.bashrc"]
+      },
+      "extensions": [
+        "amplify.aws-cli"
+      ]
+    }
   }
 }
