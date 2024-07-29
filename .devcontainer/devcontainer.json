@@ -20,7 +20,7 @@
         "terminal.integrated.shellArgs.linux": ["--init-file", "/workspaces/.bashrc"]
       },
       "extensions": [
-        "amplify.aws-cli"
+        "amazonwebservices.aws-toolkit-vscode"
       ]
     }
   }
